@@ -33,10 +33,10 @@ def main():
         print("Okay, no problem." " We are here to help.")
         print("")
     
-        trip_response = input("What part of your trip would you like to change?"
-        "Destination, restaurant, transportation, or entertainment? ")
+        trip_response = input("What part of your trip would you like to change? "
+        "Type '1' for destination, type '2' for restaurant, type '3' for transportation, or type '4' for entertainment? ")
 
-        if trip_response == "destination":
+        if trip_response == "1":
             print("We will now pick a new destination!")
             destination = get_destination(destination_list)
             print("This is your new destination:", destination)
