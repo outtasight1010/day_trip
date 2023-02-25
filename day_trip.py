@@ -49,21 +49,64 @@ def main():
                 answer = input("Are you happy with this new choice? 'yes' or 'no'? ")
             else:
                 if answer == "yes":
-                    print("Wonderful, happy travels!")
-
-
-        elif trip_response == "restaurant":
+                    trip_details(destination, restaurant, trip, entertainment)
+        elif trip_response == "2":
             print("We will now pick a different restaurant!")
-        elif trip_response == "transportation":
+            restaurant = get_restaurant(restaurant_list)
+            print("This is your new restaurant:", restaurant)
+            answer = input("Are you happy with this new choice? 'yes' or 'no'? ")
+            #while loop to assist user in selecting another random choice
+            while answer == "no":
+                print("We will now pick a new restaurant!")
+                restaurant = get_restaurant(restaurant_list)
+                print("This is your new restaurant:", restaurant)
+                answer = input("Are you happy with this new choice? 'yes' or 'no'? ")
+            else:
+                if answer == "yes":
+                    trip_details(destination, restaurant, trip, entertainment)
+        elif trip_response == "3":
             print("We will pick a different mode of transportation!")
-        elif trip_response == "entertainment":
+            trip = get_transportation(transportation_list)
+            print("This is your new mode of transportation:", trip)
+            answer = input("Are you happy with this new choice? 'yes' or 'no'? ")
+            #while loop to assist user in selecting another random choice
+            while answer == "no":
+                print("We will now pick a new mode of transportation!")
+                trip = get_transportation(transportation_list)
+                print("This is your new mode of transportation:", trip)
+                answer = input("Are you happy with this new choice? 'yes' or 'no'? ")
+            else:
+                if answer == "yes":
+                    trip_details(destination, restaurant, trip, entertainment)
+        elif trip_response == "4":
             print("A new form of entertainment on it's way!")
+            entertainment = get_entertainment(entertainment_list)
+            print("This is your new choice of entertainment:", entertainment)
+            answer = input("Are you happy with this new choice? 'yes' or 'no'? ")
+            #while loop to assist user in selecting another random choice
+            while answer == "no":
+                print("We will now pick a new form of entertainment.")
+                entertainment = get_entertainment(entertainment_list)
+                print("This is your new choice of entertainment:", entertainment)
+                answer = input("Are you happy with this new choice? 'yes' or 'no'? ")
+            else:
+                if answer == "yes":
+                    trip_details(destination, restaurant, trip, entertainment)
+
+
+
                           
     
 
     
 
 
+def trip_details(destination, restaurant, trip, entertainment): #created function for final choices
+    print("Happy travels! Your final itinerary is:")
+    print("Destination:", destination)
+    print("Restaurant:", restaurant)
+    print("Transportation:", trip)
+    print("Entertainment:", entertainment)
 
 
 
