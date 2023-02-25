@@ -22,7 +22,7 @@ def main():
 
     print("")
 
-    answer = input("Are you happy with this itinerary? ")
+    answer = input("Are you happy with this itinerary? Yes or no? ")
 
     if answer == "yes":
         print("")
