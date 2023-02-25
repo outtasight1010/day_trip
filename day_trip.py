@@ -41,6 +41,7 @@ def main():
             destination = get_destination(destination_list)
             print("This is your new destination:", destination)
             answer = input("Are you happy with this new choice? 'yes' or 'no'? ")
+            #while loop to assist user in selecting another random choice
             while answer == "no":
                 print("We will now pick a new destination!")
                 destination = get_destination(destination_list)
